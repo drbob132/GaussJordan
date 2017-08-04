@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class GaussJordanTest {
 	public static void main(String[] args){
-		System.out.println("Bob's rref using the Gauss-Jordan method, following matlab formatting, except you must put a space between each element, including: ';' '[', ']'");
-		System.out.println("Ex: [ 1 2 3 ; 14 15 16 ; 67 258 59 ]");
-		System.out.println("Also, tester only works with argument input.");
+		System.out.println("Bob's rref using the Gauss-Jordan method"/*+ ", following matlab formatting, except you must put a space between each element, including: ';' '[', ']'"*/);
+		//System.out.println("Ex: [ 1 2 3 ; 14 15 16 ; 67 258 59 ]");
+		//System.out.println("Also, tester only works with argument input.");
 		
 		//double[][] input = getDouble2D(args);
 		double[][] input = new double[3][];

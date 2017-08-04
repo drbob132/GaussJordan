@@ -38,13 +38,15 @@ public class GaussJordan {
 				int nonzero = i;
 				do{
 					nonzero++;
-				}while((nonzero < matrix.length) && (matrix[nonzero][j] != 0.0d));
+					//System.out.println("finding nonzero at row " + nonzero);
+				}while((nonzero < matrix.length) && (matrix[nonzero][j] == 0.0d));
 				//if found, swap that row with current row
 				if(nonzero < matrix.length){
 					double[] rowTemp = matrix[nonzero];
 					matrix[nonzero] = matrix[i];
 					matrix[i] = rowTemp;
 				}
+				//print(matrix);
 			}
 			//if found above
 			if(matrix[i][j] != 0.0d){
@@ -62,12 +64,22 @@ public class GaussJordan {
 				}
 				//i++
 				i++;
+				//print(matrix);
 			}
 		}
 		
 			
 		//remove this
 		return matrix;
+	}
+	
+	private static void print(double[][] matrix){
+		for(int i=0; i < matrix.length; i++){
+			for(int j=0; j < matrix[i].length; j++){
+				System.out.print("" + matrix[i][j] + " ");
+			}
+			System.out.println("");
+		}
 	}
 	
 	private static void subtract(double[] reference, double times, double[] target){
