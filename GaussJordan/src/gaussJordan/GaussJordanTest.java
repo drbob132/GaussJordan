@@ -9,19 +9,27 @@ public class GaussJordanTest {
 		//System.out.println("Also, tester only works with argument input.");
 		
 		//double[][] input = getDouble2D(args);
-		double[][] input = new double[3][];
-		input[0] = new double[]{0d, 2d, 3d, 4d};
-		input[1] = new double[]{0d, 4d, 6d, 8d};
-		input[2] = new double[]{3d, 3d, 3d, 3d};
+		//opting to hardcode test case for now -- IO takes a lot of work
+		double[][] input1 = new double[3][];
+		input1[0] = new double[]{0d, 2d, 3d, 4d};
+		input1[1] = new double[]{0d, 4d, 6d, 8d};
+		input1[2] = new double[]{3d, 3d, 3d, 3d};
 		
-		print(input);
-		
+		double[][] input2 = new double[4][];
+		input2[0] = new double[]{1d, 2d, 3d, 4d, 5d, 6d, 7d};
+		input2[1] = new double[]{0d, 0d, 0d, 0d, 0d, -4d, -8d};
+		input2[2] = new double[]{5d, 3d, 5d, 3d, 5d, 3d, 5d};
+		input2[3] = new double[]{3d, 5d, 3d, 5d, 3d, 5d, 3d};
 
-		System.out.println("");
+		System.out.println("example 1:");
+		print(input1);
+		System.out.println("rref:");
+		print(GaussJordan.rref(input1));
 		
-		double[][] rref = GaussJordan.rref(input);
-		
-		print(rref);
+		System.out.println("example 2:");
+		print(input2);
+		System.out.println("rref:");
+		print(GaussJordan.rref(input2));
 	}
 	
 	private static void print(double[][] matrix){
